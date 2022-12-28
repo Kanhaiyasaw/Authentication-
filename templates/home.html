@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>home page</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+                <div class="bg-danger">
+                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Change Password</button>
+                    <button  type="button" class="btn btn-info btn-lg"><a href="{% url 'logout'%}">Logout</a></button>    
+                    <h1>Hello Mister {{user.username}}</h1>
+                </div>
+            </div>
+        <!-- Trigger the modal with a button -->
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog">
+          
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Change Password</h4>
+              </div>
+              <div class="modal-body">
+                <form action="{% url 'change_password'%}" method="post">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Current Password</label>
+                      <input type="text" class="form-control" name="currpass">
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">New Password</label>
+                      <input type="password" class="form-control" name="pwd1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Confirm New Password</label>
+                        <input type="password" class="form-control" name="pwd2">
+                    </div>
+                    <div>
+                    <button type="submit" class="btn btn-primary" onclick="displayInfo()">Submit</button>
+                    </div>
+                  </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        
+      </div>
+</body>
+</html>
+<script>
+    function displayInfo(){
+			alert("Password Successfully Changed...");
+    }
+</script>
