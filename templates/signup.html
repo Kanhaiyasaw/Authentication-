@@ -42,35 +42,35 @@
 							{% csrf_token %}
 							<div class="form-group mb-3">
 			      			<label class="label" for="name">First name</label>
-			      			<input type="text" class="form-control" name="txtfname" placeholder="First name" required>
+			      			<input type="text" class="form-control" name="firstname" placeholder="First name" required>
 			      		</div>
                           <div class="form-group mb-3">
                             <label class="label" for="name">Last name</label>
-                            <input type="text" class="form-control" name="txtlname" placeholder="Last name" required>
+                            <input type="text" class="form-control" name="lastname" placeholder="Last name" required>
                         </div>
                         <div class="form-group mb-3">
                             <label class="label" for="name">Username</label>
-                            <input type="text" class="form-control" name="txtuname" placeholder="Username" required>
+                            <input type="text" class="form-control" name="username" placeholder="Username" required>
                         </div>
 						<div class="form-group mb-3">
                             <label class="label" for="name">Email</label>
-                            <input type="text" class="form-control" name="txtemail" placeholder="Email" required>
+                            <input type="text" class="form-control" name="email" placeholder="Email" required>
                         </div>
                         <div class="form-group mb-3">
                             <label class="label" for="name">Address</label>
-                            <input type="text" class="form-control" name="txtadd" placeholder="Address" required>
+                            <input type="text" class="form-control" name="address" placeholder="Address" required>
                         </div>
                         <div class="form-group mb-3">
                             <label class="label" for="name">City</label>
-                            <input type="text" class="form-control" name="txtcity" placeholder="City" required>
+                            <input type="text" class="form-control" name="city" placeholder="City" required>
                         </div>
                         <div class="form-group mb-3">
                             <label class="label" for="password">Password</label>
-                          <input type="password" class="form-control" name="txtpwd1" placeholder="Password" required>
+                          <input type="password" class="form-control" name="password" placeholder="Password" required>
                         </div>
 		            <div class="form-group mb-3">
 		            	<label class="label" for="password">Confirm Password</label>
-		              <input type="password" class="form-control" name="txtpwd2" placeholder="Confirm Password" required>
+		              <input type="password" class="form-control" name="cpassword" placeholder="Confirm Password" required>
 		            </div>
 		            <div class="form-group">
 		            	<button type="submit" class="form-control btn btn-primary rounded submit px-3">Sign In</button>
@@ -83,7 +83,7 @@
 			</div>
 		</div>
 	</section>
-   
+   <!-- Javscript files-->
 	<script src="{% static 'js/jquery.min.js' %}"></script>
 	<script src="{% static 'js/popper.js' %}"></script>
 	<script src="{% static 'js/bootstrap.min.js' %}"></script>
